@@ -1,0 +1,194 @@
+/* ==========================================================================
+   ESTILOS DE LA SECCIÓN DE BIENVENIDA
+   ========================================================================== */
+
+
+/* ==========================================================================
+   ESTILOS DE LA SECCIÓN DE BIENVENIDA
+   ========================================================================== */
+.categories-list {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 10px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.menu {
+    border: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: #A3A1A2;
+}
+.nav-menu{
+    padding: 2px;
+    font-family: var(--font-main);
+    text-decoration: none;
+    color: var(--primary-color)
+}
+.nav-menu img {
+    margin: 2px;
+    width: 20px;
+}
+
+/* ==========================================================================
+   ESTILOS DE LA SECCIÓN Y LA REJILLA (GRID)
+   ========================================================================== */
+.Product-Categories-Section {
+    padding: 20px;
+    font-family: var(--font-main);
+}
+
+/* Mobile-first: Por defecto en pantallas pequeñas muestra 2 columnas */
+.Product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+/* ==========================================================================
+   TARJETA DE PRODUCTO (CARD)
+   ========================================================================== */
+.Product-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Contenedor de la imagen y botón favoritos */
+.Card-Image-Container {
+    position: relative;
+    width: 100%;
+    height: 70%;
+    padding-top: 125px;
+    background-color: var(--bg-light);
+    border-radius: 12px;
+}
+
+.Product-Image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+/* Botón flotante de Favoritos */
+.bn-favorite {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #292526;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.bn-favorite:hover {
+    background-color: #A3A1A2;
+}
+.bn-favorite:active {
+    transform: scale(0.9);
+    color: var(--accent-color);
+}
+
+/* Información de la tarjeta */
+.card-info {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.Product-Category-Tag {
+    font-size: 0.75rem;
+    font-family: var(--font-main);
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+
+.Details {
+    font-size: 0.9rem;
+    font-weight: 700;
+    font-family: var(--font-main);
+    color: var(--primary-color);
+    margin: 0 0 3px 3px;
+    line-height: 1;
+    text-decoration: none;
+}
+
+/* Calificaciones (Ratings) */
+.Product-Rating {
+    display: flex;
+    align-items: right;
+    gap: 4px;
+    font-size: 0.7rem;
+    margin-bottom: 5px;
+}
+
+.stars {
+    width: 13px;
+    height: 13px;
+}
+
+.NoRating {
+    color: var(--text-muted);
+}
+
+/* Footer de la tarjeta: Precio y botón */
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto; /* Alineación perfecta al fondo */
+}
+
+.Product-Price {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* ==========================================================================
+   MEDIA QUERIES (RESPONSIVE)
+   ========================================================================== */
+
+/* Pantallas medianas (Tabletas - desde 600px) */
+@media (min-width: 600px) {
+    .Product-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    .Product-Title {
+        font-size: 1rem;
+    }
+}
+
+/* Pantallas grandes (Escritorio - desde 1024px) */
+@media (min-width: 1024px) {
+    .Product-grid {
+        grid-template-columns: repeat(4, 1fr); /* 4 tarjetas por fila */
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .Product-Categories-Section {
+        padding: 40px 20px;
+    }
+    .Details:hover {
+        background-color: #333333; /* Efecto hover visual sin romper restricciones */
+    }
+}
