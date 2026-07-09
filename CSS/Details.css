@@ -1,0 +1,386 @@
+/* ==========================================================================
+   IMPORTACIÓN Y CONFIGURACIÓN BASE
+   ========================================================================== */
+@import url('variables.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main, 'Encode Sans', sans-serif);
+    background-color: #ffffff;
+    color: #111111;
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   LÓGICA INTERACTIVA CON :TARGET (SIMULACIÓN DINÁMICA SIN JS)
+   ========================================================================== */
+
+/* 1. Por defecto ocultamos todas las vistas de detalle de producto */
+.detail-product-view {
+    display: none;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* 2. Mostramos únicamente la vista cuyo ID coincida con el #hash de la URL */
+.detail-product-view:target {
+    display: flex;
+}
+
+/* 3. Respaldo: Si entran a detail.html sin un ID en la URL, se muestra el primero */
+.detail-product-view:first-of-type {
+    display: flex;
+}
+
+/* 4. Si hay un producto seleccionado en la URL que NO es el primero, 
+      ocultamos el primero para que no se dupliquen visualmente */
+.detail-product-view:target ~ .detail-product-view:first-of-type {
+    display: none;
+}
+
+
+/* ==========================================================================
+   ESTRUCTURA Y LAYOUT (MOBILE-FIRST)
+   ========================================================================== */
+
+/* Bloque Superior: Galería de Imágenes */
+.product-gallery {
+    position: relative;
+    width: 100%;
+    height: 55vh; /* Ocupa más de la mitad de la pantalla móvil */
+    background-color: #f5f5f5;
+}
+
+.product-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Botones flotantes sobre la imagen */
+.gallery-actions {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+.btn-back, .btn-fav {
+    background-color: #ffffff;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #111111;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.btn-back:active, .btn-fav:active {
+    transform: scale(0.9);
+}
+
+.btn-fav {
+    color: #757575;
+}
+
+/* Bloque Inferior: Panel de Información */
+.product-info {
+    background-color: #ffffff;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    margin-top: -20px; /* Sube el panel para montarse elegantemente sobre la foto */
+    position: relative;
+    padding: 24px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.03);
+}
+
+.product-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+.product-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+}
+
+.stars {
+    color: #ffb703;
+}
+
+.rating-count {
+    color: #757575;
+    margin-left: 4px;
+}
+
+.views-counter {
+    color: #757575;
+    background-color: #f9f9f9;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+/* ==========================================================================
+   ACORDEÓN DESPLEGABLE NATIVO (DETAILS / SUMMARY)
+   ========================================================================== */
+.product-description-block {
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+    padding: 10px 0;
+}
+
+.accordion-description summary {
+    list-style: none; /* Oculta la flecha por defecto del navegador */
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Añade un indicador visual (+) usando pseudo-elementos */
+.accordion-description summary::after {
+    content: '+';
+    font-size: 1.2rem;
+}
+
+.accordion-description[open] summary::after {
+    content: '−';
+}
+
+.full-description-content {
+    padding-top: 10px;
+    font-size: 0.88rem;
+    color: #555555;
+}
+
+/* ==========================================================================
+   FORMULARIO DE PERSONALIZACIÓN
+   ========================================================================== */
+.customization-row {
+    display: flex;
+    flex-direction: row; /* Alineación horizontal */
+    gap: 20px;           /* Espacio de separación entre Talla y Color */
+    width: 100%;
+}
+
+/* Hacemos que cada bloque ocupe exactamente la mitad del espacio disponible */
+.customization-row .custom-group {
+    flex: 1; 
+}
+
+   .product-customization {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.custom-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.group-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #757575;
+    letter-spacing: 0.5px;
+}
+
+.options-container {
+    display: flex;
+    gap: 12px;
+}
+
+/* Esconder los Inputs Reales */
+.options-container input[type="radio"] {
+    display: none;
+}
+
+/* Estilizar las Etiquetas de Tallas */
+.options-container label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: 2px solid #eeeeee;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Efecto de Selección de Talla */
+.options-container input[type="radio"]:checked + label {
+    border-color: #111111;
+    background-color: #111111;
+    color: #ffffff;
+}
+
+/* Estilizar las Etiquetas de Color */
+.options-container.colors label {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    box-shadow: 0 0 0 2px #eeeeee; /* Simula un borde externo separado */
+}
+
+/* Efecto de Selección de Color */
+.options-container.colors input[type="radio"]:checked + label {
+    box-shadow: 0 0 0 2px #111111;
+}
+
+/* Selector de Cantidad */
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    border: 1px solid #eeeeee;
+    border-radius: 50px;
+    width: max-content;
+    overflow: hidden;
+}
+
+.qty-btn {
+    background-color: #f9f9f9;
+    border: none;
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.quantity-selector input {
+    width: 40px;
+    height: 36px;
+    text-align: center;
+    border: none;
+    border-left: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   BARRA FIJA DE COMPRA (CHECKOUT ACTIONS)
+   ========================================================================== */
+.checkout-actions {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    border-top: 1px solid #eeeeee;
+    padding: 16px 24px;
+    margin: 20px -24px -24px -24px; /* Cancela el padding del contenedor padre */
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    z-index: 20;
+}
+
+.price-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-buy-now {
+    background-color: #111111;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.btn-buy-now img {
+    fill:#121111;
+    stroke: #ffffff;
+    width: 20px;
+    height: 20px;
+}
+.btn-buy-now:hover {
+    background-color: #333333;
+    transform: scale(0.9);
+    color: var(--bg-light);
+}
+.btn-back, .btn-fav {
+    background-color: #ffffff;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #111111;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+
+/* ==========================================================================
+   MEDIA QUERIES (ADAPTACIÓN A PANTALLAS GRANDES)
+   ========================================================================== */
+@media (min-width: 768px) {
+    .detail-product-view:target,
+    .detail-product-view:first-of-type {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Divide la pantalla en dos columnas en Escritorio */
+        height: 100vh;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .product-gallery {
+        height: 100vh;
+    }
+
+    .product-info {
+        margin-top: 0;
+        border-radius: 0;
+        padding: 40px;
+        overflow-y: auto; /* Permite hacer scroll interno en la columna de textos */
+    }
+
+    .checkout-actions {
+        position: relative;
+        margin-top: auto;
+        padding: 20px 0 0 0;
+        border-top: 1px solid #eeeeee;
+    }
+}

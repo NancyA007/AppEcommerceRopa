@@ -3,19 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalle del Producto</title>
+    <title>Product Detail - E-Commerce</title>
+    <link rel="stylesheet" href="../CSS/Styles.css">
+    <link rel="stylesheet" href="../CSS/Variables.css">
+    <link rel="stylesheet" href="../CSS/Details.css">
 </head>
 <body>
-    <main id="Vestido-Floral" class="Detail-Product-View">
-        <section class="Product-Gallery">
-            <a href="../Index.html" class="bn-back"><img src="Storage/Img/AppIcon/previous.svg" alt="Back"></a>
 
+    <main id="Vestido-Floral" class="detail-product-view">
+        <section class="product-gallery">
+            <div class="gallery-actions">
+                <a href="../index.html" class="btn-back" aria-label="Go back"><img src="../Storage/Img/AppIcon/previous.svg" alt="Back"></a>
+                <button class="bn-favorite" aria-label="Añadir a Favotiros"><img src="../Storage/Img/AppIcon/fav.svg" alt="Favorite"></button>
+            </div>
+            <img src="../Storage/Img/Products/Dresses/LCF.jpg" alt="Vestido Largo Casual Floral" class="main-product-image">
         </section>
-    </main>
-    <main id="Elegante-Negro" class="Detail-Product-View">
-        <section class="Product-Gallery">
-            <a href="../Index.html" class="bn-back"><img src="Storage/Img/AppIcon/previous.svg" alt="Back"></a>
+
+        <section class="product-info">
             
+            <div class="info-header">
+                <h1 class="product-title">Vestido Largo Casual Floral</h1>
+                
+                <div class="product-meta">
+                    <div class="Product-Rating">
+                        <img src="../Storage/Img/AppIcon/star.svg" alt="Rating" class="stars">
+                        <span class="NoRating">(5.0)</span>
+                        <span class="views-counter">👁 124 people viewed this</span>
+                    </div>
+                    <div class="custom-group quantity-section">
+                        <div class="quantity-selector">
+                            <button type="button" class="qty-btn">-</button>
+                            <input type="number" name="quantity" value="1" min="1" readonly>
+                            <button type="button" class="qty-btn">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-description-block">
+                <details class="accordion-description">
+                    <summary class="btn-see-more">Read Full Description</summary>
+                    <div class="full-description-content">
+                        <p>Diseñado con un tejido fluido y un patrón botánico ideal para salidas por la tarde o eventos semi-formales al aire libre.</p>
+                    </div>
+                </details>
+            </div>
+
+            <form class="product-customization">
+                <div class="customization-row">
+                    <div class="custom-group">
+                        <span class="group-label">Size</span>
+                        <div class="options-container">
+                            <input type="radio" name="size-floral" id="size-s-floral" value="s" checked>
+                            <label for="size-s-floral">S</label>
+
+                            <input type="radio" name="size-floral" id="size-m-floral" value="m">
+                            <label for="size-m-floral">M</label>
+
+                            <input type="radio" name="size-floral" id="size-l-floral" value="l">
+                            <label for="size-l-floral">L</label>
+                        </div>
+                    </div>
+
+                    <div class="custom-group">
+                        <span class="group-label">Color</span>
+                        <div class="options-container colors">
+                            <input type="radio" name="color-floral" id="color-red-floral" value="red" checked>
+                            <label for="color-red-floral" style="background-color: #e63946;" title="Floral Red"></label>
+
+                            <input type="radio" name="color-floral" id="color-blue-floral" value="blue">
+                            <label for="color-blue-floral" style="background-color: #457b9d;" title="Floral Blue"></label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <div class="checkout-actions">
+                <div class="price-container">
+                    <a href="checkout.html" class="btn-buy-now"><img src="../Storage/Img/AppIcon/ShopCart.svg" alt="Cart">Add to Cart | Q.275.00</a>
+                </div>
+            </div>
+
         </section>
     </main>
 </body>
