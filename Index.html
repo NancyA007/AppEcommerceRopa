@@ -12,9 +12,9 @@
     <header class="main-header">
         <div class="header-top">
             <div class="User-Profile">
-                <img src="Storage/Img/Perfil.jpg" alt="Foto de perfil">
-                <p class="Profile Saludo">Hello, Welcome 👋</p>
-                <h1 class="Profile User">Nancy Aldana</h1>
+                <div class="ProfileSaludo">Hello, Welcome 👋</div>
+                <div class="ProfileUser"><h1>Nancy Aldana</h1></div>
+                <img src="Storage/Img/Perfil.jpg" alt="Foto de perfil" class="profile-img">
             </div>
             <div class="Search-bar">
                 <input type="text" placeholder="🔍 Search Clothes..." id="searchInput">
@@ -23,19 +23,19 @@
                 </button>
             </div>
         </div>
-        <nav class="nav-categories"></nav>
+        <nav class="nav-categories">
             <ul class="categories-list">
-                <li class="menu"><a href="#Todas" class="nav-menu"><img src="Storage/Img/AppIcon/Items.jpg" alt="All Items">All Items</a></li>
-                <li class="menu"><a href="#Dress" class="nav-menu"><img src="Storage/Img/AppIcon/Dress.jpg" alt="Dress">Vestidos</a></li>
-                <li class="menu"><a href="#TShirt" class="nav-menu"><img src="Storage/Img/AppIcon/Top.jpg" alt="Top">Camisetas y Tops</a></li>
-                <li class="menu"><a href="#Jeans" class="nav-menu"><img src="Storage/Img/AppIcon/Jeans.jpg" alt="Jeans">Vaqueros y Jeans</a></li>
-                <li class="menu"><a href="#Sweaters" class="nav-menu"><img src="Storage/Img/AppIcon/Sweater.jpg" alt="Sweaters">Sudaderas y Suéteres</a></li>
-                <li class="menu"><a href="#Coats" class="nav-menu"><img src="Storage/Img/AppIcon/Abrigo.png" alt="Coats">Chaqueta y Abrigos</a></li>
-                <li class="menu"><a href="#Pants" class="nav-menu"><img src="Storage/Img/AppIcon/Shorts.png" alt="Pants">Pantalones y Shorts</a></li>
-                <li class="menu"><a href="#Shirts" class="nav-menu"><img src="Storage/Img/AppIcon/Blusa.png" alt="Blouses">Camisas y Blusas</a></li>
-                <li class="menu"><a href="#Footwear" class="nav-menu"><img src="Storage/Img/AppIcon/Shoes.jpg" alt="Footwear">Calzado</a></li>
-                <li class="menu"><a href="#Sleepwear" class="nav-menu"><img src="Storage/Img/AppIcon/Pijama.jpg" alt="Sleepwear">Ropa de Dormir y Lounge</a></li>
-                <li class="menu"><a href="#Accessories" class="nav-menu"><img src="Storage/Img/AppIcon/Accessories.png" alt="Accessories">Accesorios de Moda</a></li>
+                <li><a href="#Todas" class="nav-menu"><img src="Storage/Img/AppIcon/Items.jpg" alt="All Items">All Items</a></li>
+                <li><a href="#Dress" class="nav-menu"><img src="Storage/Img/AppIcon/Dress.jpg" alt="Dress">Vestidos</a></li>
+                <li><a href="#TShirt" class="nav-menu"><img src="Storage/Img/AppIcon/Top.jpg" alt="Top">Camisetas y Tops</a></li>
+                <li><a href="#Jeans" class="nav-menu"><img src="Storage/Img/AppIcon/Jeans.jpg" alt="Jeans">Vaqueros y Jeans</a></li>
+                <li><a href="#Sweaters" class="nav-menu"><img src="Storage/Img/AppIcon/Sweater.jpg" alt="Sweaters">Sudaderas y Suéteres</a></li>
+                <li><a href="#Coats" class="nav-menu"><img src="Storage/Img/AppIcon/Abrigo.png" alt="Coats">Chaqueta y Abrigos</a></li>
+                <li><a href="#Pants" class="nav-menu"><img src="Storage/Img/AppIcon/Shorts.png" alt="Pants">Pantalones y Shorts</a></li>
+                <li><a href="#Shirts" class="nav-menu"><img src="Storage/Img/AppIcon/Blusa.png" alt="Blouses">Camisas y Blusas</a></li>
+                <li><a href="#Footwear" class="nav-menu"><img src="Storage/Img/AppIcon/Shoes.jpg" alt="Footwear">Calzado</a></li>
+                <li><a href="#Sleepwear" class="nav-menu"><img src="Storage/Img/AppIcon/Pijama.jpg" alt="Sleepwear">Ropa de Dormir y Lounge</a></li>
+                <li><a href="#Accessories" class="nav-menu"><img src="Storage/Img/AppIcon/Accessories.png" alt="Accessories">Accesorios de Moda</a></li>
             </ul>
         </nav>
     </header>
@@ -65,7 +65,7 @@
                         <button class="bn-favorite" aria-label="Añadir a Favotiros"><img src="Storage/Img/AppIcon/fav.svg" alt="Favorite"></button>
                     </div>
                     <div class="card-info">
-                        <h3><a href="Views/Detail.html#Elegante-Negro" class="Details">Vestido de Noche Elegante Negro</a></h3>
+                        <h3><a href="Views/Detail.html#Vestido-Floral" class="Details">Vestido de Noche Elegante Negro</a></h3>
                         <span class="Product-Category-Tag">Vestidos</span>
                         <div class="card-footer">
                             <span class="Product-Price">Q.450.00</span>
@@ -82,7 +82,7 @@
                         <button class="bn-favorite" aria-label="Añadir a Favotiros"><img src="Storage/Img/AppIcon/fav.svg" alt="Favorite"></button>
                     </div>
                     <div class="card-info">
-                        <h3><a href="Detail.html" class="Details">Vestido Corto de Verano Algodón</a></h3>
+                        <h3><a href="Views/Detail.html#Vestido-Floral" class="Details">Vestido Corto de Verano Algodón</a></h3>
                         <span class="Product-Category-Tag">Vestidos</span>
                         <div class="card-footer">
                             <span class="Product-Price">Q.199.00</span>
@@ -99,7 +99,7 @@
                         <button class="bn-favorite" aria-label="Añadir a Favotiros"><img src="Storage/Img/AppIcon/fav.svg" alt="Favorite"></button>
                     </div>
                     <div class="card-info">
-                        <h3><a href="Detail.html" class="Details">Vestido Denim con Cinturón</a></h3>
+                        <h3><a href="Views/Detail.html#Vestido-Floral" class="Details">Vestido Denim con Cinturón</a></h3>
                         <span class="Product-Category-Tag">Vestidos</span>
                         <div class="card-footer">
                             <span class="Product-Price">Q.195.00</span>
@@ -120,7 +120,7 @@
                         <button class="bn-favorite" aria-label="Añadir a Favotiros"><img src="Storage/Img/AppIcon/fav.svg" alt="Favorite"></button>
                     </div>
                     <div class="card-info">
-                        <h3><a href="Detail.html" class="Details">Camiseta Básica de Algodón Orgánico</a></h3>
+                        <h3><a href="Views/Detail.html#Vestido-Floral" class="Details">Camiseta Básica de Algodón Orgánico</a></h3>
                         <span class="Product-Category-Tag">Camisetas y Tops</span>
                         <div class="card-footer">
                             <span class="Product-Price">Q. 85.00</span>
@@ -137,7 +137,7 @@
                         <button class="bn-favorite" aria-label="Añadir a Favotiros"><img src="Storage/Img/AppIcon/fav.svg" alt="Favorite"></button>
                     </div>
                     <div class="card-info">
-                        <h3><a href="Detail.html" class="Details">Top Crop de Punto Acanalado</a></h3>
+                        <h3><a href="Views/Detail.html#Vestido-Floral" class="Details">Top Crop de Punto Acanalado</a></h3>
                         <span class="Product-Category-Tag">Camisetas y Tops</span>
                         <div class="card-footer">
                             <span class="Product-Price">Q. 95.00</span>
@@ -154,7 +154,7 @@
                         <button class="bn-favorite" aria-label="Añadir a Favotiros"><img src="Storage/Img/AppIcon/fav.svg" alt="Favorite"></button>
                     </div>
                     <div class="card-info">
-                        <h3><a href="Detail.html" class="Details">Camiseta Estampada Diseño Gráfico</a></h3>
+                        <h3><a href="Views/Detail.html#Vestido-Floral" class="Details">Camiseta Estampada Diseño Gráfico</a></h3>
                         <span class="Product-Category-Tag">Camisetas y Tops</span>
                         <div class="card-footer">
                             <span class="Product-Price">Q.115.00</span>
@@ -171,7 +171,7 @@
                         <button class="bn-favorite" aria-label="Añadir a Favotiros"><img src="Storage/Img/AppIcon/fav.svg" alt="Favorite"></button>
                     </div>
                     <div class="card-info">
-                        <h3><a href="Detail.html" class="Details">Blusa de Lino Manga Corta</a></h3>
+                        <h3><a href="Views/Detail.html#Vestido-Floral" class="Details">Blusa de Lino Manga Corta</a></h3>
                         <span class="Product-Category-Tag">Camisetas y Tops</span>
                         <div class="card-footer">
                             <span class="Product-Price">Q.165.00</span>
@@ -192,7 +192,7 @@
                         <button class="bn-favorite" aria-label="Añadir a Favotiros"><img src="Storage/Img/AppIcon/fav.svg" alt="Favorite"></button>
                     </div>
                     <div class="card-info">
-                        <h3><a href="Detail.html" class="Details">Jeans Skinny de Tiro Alto Azul Oscuro</a></h3>
+                        <h3><a href="Views/Detail.html#Vestido-Floral" class="Details">Jeans Skinny de Tiro Alto Azul Oscuro</a></h3>
                         <span class="Product-Category-Tag">Vaqueros y Jeans</span>
                         <div class="card-footer">
                             <span class="Product-Price">Q.299.00</span>
@@ -209,7 +209,7 @@
                         <button class="bn-favorite" aria-label="Añadir a Favotiros"><img src="Storage/Img/AppIcon/fav.svg" alt="Favorite"></button>
                     </div>
                     <div class="card-info">
-                        <h3><a href="Detail.html" class="Details">Vaqueros Mom Fit estilo Clásico</a></h3>
+                        <h3><a href="Views/Detail.html#Vestido-Floral" class="Details">Vaqueros Mom Fit estilo Clásico</a></h3>
                         <span class="Product-Category-Tag">Vaqueros y Jeans</span>
                         <div class="card-footer">
                             <span class="Product-Price">Q.325.00</span>
@@ -226,7 +226,7 @@
                         <button class="bn-favorite" aria-label="Añadir a Favotiros"><img src="Storage/Img/AppIcon/fav.svg" alt="Favorite"></button>
                     </div>
                     <div class="card-info">
-                        <h3><a href="Detail.html" class="Details">Jeans Rectos Lavado Claro</a></h3>
+                        <h3><a href="Views/Detail.html#Vestido-Floral" class="Details">Jeans Rectos Lavado Claro</a></h3>
                         <span class="Product-Category-Tag">Vaqueros y Jeans</span>
                         <div class="card-footer">
                             <span class="Product-Price">Q.299.00</span>
@@ -243,7 +243,7 @@
                         <button class="bn-favorite" aria-label="Añadir a Favotiros"><img src="Storage/Img/AppIcon/fav.svg" alt="Favorite"></button>
                     </div>
                     <div class="card-info">
-                        <h3><a href="Detail.html" class="Details">Jeans Slim Fit con Roturas</a></h3>
+                        <h3><a href="Views/Detail.html#Vestido-Floral" class="Details">Jeans Slim Fit con Roturas</a></h3>
                         <span class="Product-Category-Tag">Vaqueros y Jeans</span>
                         <div class="card-footer">
                             <span class="Product-Price">Q.315.00</span>
@@ -264,7 +264,7 @@
                         <button class="bn-favorite" aria-label="Añadir a Favotiros"><img src="Storage/Img/AppIcon/fav.svg" alt="Favorite"></button>
                     </div>
                     <div class="card-info">
-                        <h3><a href="Detail.html" class="Details">Sudadera con Capucha Básica</a></h3>
+                        <h3><a href="Views/Detail.html#Vestido-Floral" class="Details">Sudadera con Capucha Básica</a></h3>
                         <span class="Product-Category-Tag">Sudaderas y Suéteres</span>
                         <div class="card-footer">
                             <span class="Product-Price">Q.225.00</span>
@@ -281,7 +281,7 @@
                         <button class="bn-favorite" aria-label="Añadir a Favotiros"><img src="Storage/Img/AppIcon/fav.svg" alt="Favorite"></button>
                     </div>
                     <div class="card-info">
-                        <h3><a href="Detail.html" class="Details">Sudadera Oversize</a></h3>
+                        <h3><a href="Views/Detail.html#Vestido-Floral" class="Details">Sudadera Oversize</a></h3>
                         <span class="Product-Category-Tag">Sudaderas y Suéteres</span>
                         <div class="card-footer">
                             <span class="Product-Price">Q.245.00</span>
@@ -298,7 +298,7 @@
                         <button class="bn-favorite" aria-label="Añadir a Favotiros"><img src="Storage/Img/AppIcon/fav.svg" alt="Favorite"></button>
                     </div>
                     <div class="card-info">
-                        <h3><a href="Detail.html" class="Details">Suéter de Cuello Alto Fino</a></h3>
+                        <h3><a href="Views/Detail.html#Vestido-Floral" class="Details">Suéter de Cuello Alto Fino</a></h3>
                         <span class="Product-Category-Tag">Sudaderas y Suéteres</span>
                         <div class="card-footer">
                             <span class="Product-Price">Q.195.00</span>
@@ -315,7 +315,7 @@
                         <button class="bn-favorite" aria-label="Añadir a Favotiros"><img src="Storage/Img/AppIcon/fav.svg" alt="Favorite"></button>
                     </div>
                     <div class="card-info">
-                        <h3><a href="Detail.html" class="Details">Cardigan Largo Abierto de Punto</a></h3>
+                        <h3><a href="Views/Detail.html#Vestido-Floral" class="Details">Cardigan Largo Abierto de Punto</a></h3>
                         <span class="Product-Category-Tag">Sudaderas y Suéteres</span>
                         <div class="card-footer">
                             <span class="Product-Price">Q.299.00</span>
@@ -336,7 +336,7 @@
                         <button class="bn-favorite" aria-label="Añadir a Favotiros"><img src="Storage/Img/AppIcon/fav.svg" alt="Favorite"></button>
                     </div>
                     <div class="card-info">
-                        <h3><a href="Detail.html" class="Details">Chaqueta Denim Clásica</a></h3>
+                        <h3><a href="Views/Detail.html#Vestido-Floral" class="Details">Chaqueta Denim Clásica</a></h3>
                         <span class="Product-Category-Tag">Chaquetas y Abrigos</span>
                         <div class="card-footer">
                             <span class="Product-Price">Q.350.00</span>
@@ -353,7 +353,7 @@
                         <button class="bn-favorite" aria-label="Añadir a Favotiros"><img src="Storage/Img/AppIcon/fav.svg" alt="Favorite"></button>
                     </div>
                     <div class="card-info">
-                        <h3><a href="Detail.html" class="Details">Chaqueta de Cuero Sintético (Biker)</a></h3>
+                        <h3><a href="Views/Detail.html#Vestido-Floral" class="Details">Chaqueta de Cuero Sintético (Biker)</a></h3>
                         <span class="Product-Category-Tag">Chaquetas y Abrigos</span>
                         <div class="card-footer">
                             <span class="Product-Price">Q.425.00</span>
@@ -370,7 +370,7 @@
                         <button class="bn-favorite" aria-label="Añadir a Favotiros"><img src="Storage/Img/AppIcon/fav.svg" alt="Favorite"></button>
                     </div>
                     <div class="card-info">
-                        <h3><a href="Detail.html" class="Details">Cortavientos Impermeable Ligero</a></h3>
+                        <h3><a href="Views/Detail.html#Vestido-Floral" class="Details">Cortavientos Impermeable Ligero</a></h3>
                         <span class="Product-Category-Tag">Chaquetas y Abrigos</span>
                         <div class="card-footer">
                             <span class="Product-Price">Q.295.00</span>
@@ -387,7 +387,7 @@
                         <button class="bn-favorite" aria-label="Añadir a Favotiros"><img src="Storage/Img/AppIcon/fav.svg" alt="Favorite"></button>
                     </div>
                     <div class="card-info">
-                        <h3><a href="Detail.html" class="Details">Blazer Formal Ajustado</a></h3>
+                        <h3><a href="Views/Detail.html#Vestido-Floral" class="Details">Blazer Formal Ajustado</a></h3>
                         <span class="Product-Category-Tag">Chaquetas y Abrigos</span>
                         <div class="card-footer">
                             <span class="Product-Price">Q.375.00</span>
@@ -408,7 +408,7 @@
                         <button class="bn-favorite" aria-label="Añadir a Favotiros"><img src="Storage/Img/AppIcon/fav.svg" alt="Favorite"></button>
                     </div>
                     <div class="card-info">
-                        <h3><a href="Detail.html" class="Details">Pantalón de Lino estilo Jogger</a></h3>
+                        <h3><a href="Views/Detail.html#Vestido-Floral" class="Details">Pantalón de Lino estilo Jogger</a></h3>
                         <span class="Product-Category-Tag">Pantalones y Shorts</span>
                         <div class="card-footer">
                             <span class="Product-Price">Q.245.00</span>
@@ -425,7 +425,7 @@
                         <button class="bn-favorite" aria-label="Añadir a Favotiros"><img src="Storage/Img/AppIcon/fav.svg" alt="Favorite"></button>
                     </div>
                     <div class="card-info">
-                        <h3><a href="Detail.html" class="Details">Pantalón de Vestir Corte Recto</a></h3>
+                        <h3><a href="Views/Detail.html#Vestido-Floral" class="Details">Pantalón de Vestir Corte Recto</a></h3>
                         <span class="Product-Category-Tag">Pantalones y Shorts</span>
                         <div class="card-footer">
                             <span class="Product-Price">Q.285.00</span>
@@ -442,7 +442,7 @@
                         <button class="bn-favorite" aria-label="Añadir a Favotiros"><img src="Storage/Img/AppIcon/fav.svg" alt="Favorite"></button>
                     </div>
                     <div class="card-info">
-                        <h3><a href="Detail.html" class="Details">Short Casual de Algodón</a></h3>
+                        <h3><a href="Views/Detail.html#Vestido-Floral" class="Details">Short Casual de Algodón</a></h3>
                         <span class="Product-Category-Tag">Pantalones y Shorts</span>
                         <div class="card-footer">
                             <span class="Product-Price">Q.135.00</span>
@@ -459,7 +459,7 @@
                         <button class="bn-favorite" aria-label="Añadir a Favotiros"><img src="Storage/Img/AppIcon/fav.svg" alt="Favorite"></button>
                     </div>
                     <div class="card-info">
-                        <h3><a href="Detail.html" class="Details">Leggings Deportivos de Alta Compresión</a></h3>
+                        <h3><a href="Views/Detail.html#Vestido-Floral" class="Details">Leggings Deportivos de Alta Compresión</a></h3>
                         <span class="Product-Category-Tag">Pantalones y Shorts</span>
                         <div class="card-footer">
                             <span class="Product-Price">Q.175.00</span>
@@ -476,7 +476,7 @@
                         <button class="bn-favorite" aria-label="Añadir a Favotiros"><img src="Storage/Img/AppIcon/fav.svg" alt="Favorite"></button>
                     </div>
                     <div class="card-info">
-                        <h3><a href="Detail.html" class="Details">Pantalón Palazzo de Tela Fluida</a></h3>
+                        <h3><a href="Views/Detail.html#Vestido-Floral" class="Details">Pantalón Palazzo de Tela Fluida</a></h3>
                         <span class="Product-Category-Tag">Pantalones y Shorts</span>
                         <div class="card-footer">
                             <span class="Product-Price">Q.265.00</span>
@@ -497,7 +497,7 @@
                         <button class="bn-favorite" aria-label="Añadir a Favotiros"><img src="Storage/Img/AppIcon/fav.svg" alt="Favorite"></button>
                     </div>
                     <div class="card-info">
-                        <h3><a href="Detail.html" class="Details">Camisa de Botones en Lino</a></h3>
+                        <h3><a href="Views/Detail.html#Vestido-Floral" class="Details">Camisa de Botones en Lino</a></h3>
                         <span class="Product-Category-Tag">Camisas y Blusas</span>
                         <div class="card-footer">
                             <span class="Product-Price">Q.225.00</span>
@@ -514,7 +514,7 @@
                         <button class="bn-favorite" aria-label="Añadir a Favotiros"><img src="Storage/Img/AppIcon/fav.svg" alt="Favorite"></button>
                     </div>
                     <div class="card-info">
-                        <h3><a href="Detail.html" class="Details">Blusa de Gasa con Cuello V</a></h3>
+                        <h3><a href="Views/Detail.html#Vestido-Floral" class="Details">Blusa de Gasa con Cuello V</a></h3>
                         <span class="Product-Category-Tag">Camisas y Blusas</span>
                         <div class="card-footer">
                             <span class="Product-Price">Q.185.00</span>
@@ -531,7 +531,7 @@
                         <button class="bn-favorite" aria-label="Añadir a Favotiros"><img src="Storage/Img/AppIcon/fav.svg" alt="Favorite"></button>
                     </div>
                     <div class="card-info">
-                        <h3><a href="Detail.html" class="Details">Camisa de Cuadros Tipo Leñador</a></h3>
+                        <h3><a href="Views/Detail.html#Vestido-Floral" class="Details">Camisa de Cuadros Tipo Leñador</a></h3>
                         <span class="Product-Category-Tag">Camisas y Blusas</span>
                         <div class="card-footer">
                             <span class="Product-Price">Q.245.00</span>
@@ -548,7 +548,7 @@
                         <button class="bn-favorite" aria-label="Añadir a Favotiros"><img src="Storage/Img/AppIcon/fav.svg" alt="Favorite"></button>
                     </div>
                     <div class="card-info">
-                        <h3><a href="Detail.html" class="Details">Camisa Formal Slim Fit Manga Larga</a></h3>
+                        <h3><a href="Views/Detail.html#Vestido-Floral" class="Details">Camisa Formal Slim Fit Manga Larga</a></h3>
                         <span class="Product-Category-Tag">Camisas y Blusas</span>
                         <div class="card-footer">
                             <span class="Product-Price">Q.265.00</span>
@@ -569,7 +569,7 @@
                         <button class="bn-favorite" aria-label="Añadir a Favotiros"><img src="Storage/Img/AppIcon/fav.svg" alt="Favorite"></button>
                     </div>
                     <div class="card-info">
-                        <h3><a href="Detail.html" class="Details">Tenis Urbanos de Cuero</a></h3>
+                        <h3><a href="Views/Detail.html#Vestido-Floral" class="Details">Tenis Urbanos de Cuero</a></h3>
                         <span class="Product-Category-Tag">Calzado</span>
                         <div class="card-footer">
                             <span class="Product-Price">Q.399.00</span>
@@ -586,7 +586,7 @@
                         <button class="bn-favorite" aria-label="Añadir a Favotiros"><img src="Storage/Img/AppIcon/fav.svg" alt="Favorite"></button>
                     </div>
                     <div class="card-info">
-                        <h3><a href="Detail.html" class="Details">Botines Casuales de Gamuza</a></h3>
+                        <h3><a href="Views/Detail.html#Vestido-Floral" class="Details">Botines Casuales de Gamuza</a></h3>
                         <span class="Product-Category-Tag">Calzado</span>
                         <div class="card-footer">
                             <span class="Product-Price">Q.450.00</span>
@@ -603,7 +603,7 @@
                         <button class="bn-favorite" aria-label="Añadir a Favotiros"><img src="Storage/Img/AppIcon/fav.svg" alt="Favorite"></button>
                     </div>
                     <div class="card-info">
-                        <h3><a href="Detail.html" class="Details">Sandalias de Cuero Casuales</a></h3>
+                        <h3><a href="Views/Detail.html#Vestido-Floral" class="Details">Sandalias de Cuero Casuales</a></h3>
                         <span class="Product-Category-Tag">Calzado</span>
                         <div class="card-footer">
                             <span class="Product-Price">Q.195.00</span>
@@ -620,7 +620,7 @@
                         <button class="bn-favorite" aria-label="Añadir a Favotiros"><img src="Storage/Img/AppIcon/fav.svg" alt="Favorite"></button>
                     </div>
                     <div class="card-info">
-                        <h3><a href="Detail.html" class="Details">Tenis Deportivos para Correr</a></h3>
+                        <h3><a href="Views/Detail.html#Vestido-Floral" class="Details">Tenis Deportivos para Correr</a></h3>
                         <span class="Product-Category-Tag">Calzado</span>
                         <div class="card-footer">
                             <span class="Product-Price">Q.499.00</span>
@@ -637,7 +637,7 @@
                         <button class="bn-favorite" aria-label="Añadir a Favotiros"><img src="Storage/Img/AppIcon/fav.svg" alt="Favorite"></button>
                     </div>
                     <div class="card-info">
-                        <h3><a href="Detail.html" class="Details">Zapatos Formales</a></h3>
+                        <h3><a href="Views/Detail.html#Vestido-Floral" class="Details">Zapatos Formales</a></h3>
                         <span class="Product-Category-Tag">Calzado</span>
                         <div class="card-footer">
                             <span class="Product-Price">Q.425.00</span>
@@ -658,7 +658,7 @@
                         <button class="bn-favorite" aria-label="Añadir a Favotiros"><img src="Storage/Img/AppIcon/fav.svg" alt="Favorite"></button>
                     </div>
                     <div class="card-info">
-                        <h3><a href="Detail.html" class="Details">Pijama de Algodón Camiseta y Pantalón</a></h3>
+                        <h3><a href="Views/Detail.html#Vestido-Floral" class="Details">Pijama de Algodón Camiseta y Pantalón</a></h3>
                         <span class="Product-Category-Tag">Ropa de Dormir y Lounge</span>
                         <div class="card-footer">
                             <span class="Product-Price">Q.195.00</span>
@@ -675,7 +675,7 @@
                         <button class="bn-favorite" aria-label="Añadir a Favotiros"><img src="Storage/Img/AppIcon/fav.svg" alt="Favorite"></button>
                     </div>
                     <div class="card-info">
-                        <h3><a href="Detail.html" class="Details">Bata de Baño de Felpa Suave</a></h3>
+                        <h3><a href="Views/Detail.html#Vestido-Floral" class="Details">Bata de Baño de Felpa Suave</a></h3>
                         <span class="Product-Category-Tag">Ropa de Dormir y Lounge</span>
                         <div class="card-footer">
                             <span class="Product-Price">Q.245.00</span>
@@ -692,7 +692,7 @@
                         <button class="bn-favorite" aria-label="Añadir a Favotiros"><img src="Storage/Img/AppIcon/fav.svg" alt="Favorite"></button>
                     </div>
                     <div class="card-info">
-                        <h3><a href="Detail.html" class="Details">Pijama Satinada de Dos Piezas</a></h3>
+                        <h3><a href="Views/Detail.html#Vestido-Floral" class="Details">Pijama Satinada de Dos Piezas</a></h3>
                         <span class="Product-Category-Tag">Ropa de Dormir y Lounge</span>
                         <div class="card-footer">
                             <span class="Product-Price">Q.265.00</span>
@@ -709,7 +709,7 @@
                         <button class="bn-favorite" aria-label="Añadir a Favotiros"><img src="Storage/Img/AppIcon/fav.svg" alt="Favorite"></button>
                     </div>
                     <div class="card-info">
-                        <h3><a href="Detail.html" class="Details">Camisón de Dormir Ligero</a></h3>
+                        <h3><a href="Views/Detail.html#Vestido-Floral" class="Details">Camisón de Dormir Ligero</a></h3>
                         <span class="Product-Category-Tag">Ropa de Dormir y Lounge</span>
                         <div class="card-footer">
                             <span class="Product-Price">Q.135.00</span>
@@ -730,7 +730,7 @@
                         <button class="bn-favorite" aria-label="Añadir a Favotiros"><img src="Storage/Img/AppIcon/fav.svg" alt="Favorite"></button>
                     </div>
                     <div class="card-info">
-                        <h3><a href="Detail.html" class="Details">Bolso de Mano estilo Tote Bag</a></h3>
+                        <h3><a href="Views/Detail.html#Vestido-Floral" class="Details">Bolso de Mano estilo Tote Bag</a></h3>
                         <span class="Product-Category-Tag">Accesorios</span>
                         <div class="card-footer">
                             <span class="Product-Price">Q.125.00</span>
@@ -747,7 +747,7 @@
                         <button class="bn-favorite" aria-label="Añadir a Favotiros"><img src="Storage/Img/AppIcon/fav.svg" alt="Favorite"></button>
                     </div>
                     <div class="card-info">
-                        <h3><a href="Detail.html" class="Details">Gafas de Sol Protección UV400</a></h3>
+                        <h3><a href="Views/Detail.html#Vestido-Floral" class="Details">Gafas de Sol Protección UV400</a></h3>
                         <span class="Product-Category-Tag">Accesorios</span>
                         <div class="card-footer">
                             <span class="Product-Price">Q.145.00</span>
@@ -764,7 +764,7 @@
                         <button class="bn-favorite" aria-label="Añadir a Favotiros"><img src="Storage/Img/AppIcon/fav.svg" alt="Favorite"></button>
                     </div>
                     <div class="card-info">
-                        <h3><a href="Detail.html" class="Details">Bufanda de Punto Suave</a></h3>
+                        <h3><a href="Views/Detail.html#Vestido-Floral" class="Details">Bufanda de Punto Suave</a></h3>
                         <span class="Product-Category-Tag">Accesorios</span>
                         <div class="card-footer">
                             <span class="Product-Price">Q.115.00</span>
@@ -781,7 +781,7 @@
                         <button class="bn-favorite" aria-label="Añadir a Favotiros"><img src="Storage/Img/AppIcon/fav.svg" alt="Favorite"></button>
                     </div>
                     <div class="card-info">
-                        <h3><a href="Detail.html" class="Details">Paquete de Calcetines Básicos</a></h3>
+                        <h3><a href="Views/Detail.html#Vestido-Floral" class="Details">Paquete de Calcetines Básicos</a></h3>
                         <span class="Product-Category-Tag">Accesorios</span>
                         <div class="card-footer">
                             <span class="Product-Price">Q.65.00</span>
@@ -796,21 +796,17 @@
         </section>
     </main>
     <nav class="mobile-nav">
-        <a href="#inicio" class="nav-item active">
-            <i class="fa-solid fa-house"></i>
-            <span><img src="Storage/Img/AppIcon/HomeIcon.jpg" alt="Home" width="75" height="75"></span>
+        <a href="#inicio" class="nav-item">
+            <span><img src="Storage/Img/AppIcon/home.svg" alt="Home"></span>
         </a>
         <a href="#carrito" class="nav-item">
-            <i class="fa-solid fa-cart-shopping"></i>
-        <span><img src="Storage/Img/AppIcon/CarritoCompras.png" alt="Carrito" width="75"></span>
+        <span><img src="Storage/Img/AppIcon/ShopCart.svg" alt="Carrito"></span>
         </a>
         <a href="#favoritos" class="nav-item">
-            <i class="fa-solid fa-heart"></i>
-            <span><img src="Storage/Img/AppIcon/fav.svg" alt="Favoritos" width="75" height="75"></span>
+            <span><img src="Storage/Img/AppIcon/heart.svg" alt="Favoritos"></span>
         </a>
         <a href="#perfil" class="nav-item">
-            <i class="fa-solid fa-user"></i>
-            <span><img src="Storage/Img/AppIcon/Profile.png" alt="Perfil" width="75" height="75"></span>
+            <span><img src="Storage/Img/AppIcon/user.svg" alt="Perfil"></span>
         </a>
     </nav>
 </body>
