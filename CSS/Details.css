@@ -12,48 +12,20 @@ body {
 }
 
 /* ==========================================================================
-   LÓGICA INTERACTIVA CON :TARGET
-   ========================================================================== */
-
-/* 1. Por defecto ocultamos todas las vistas de detalle de producto */
-.detail-product-view {
-    display: none;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-/* 2. Mostramos únicamente la vista cuyo ID coincida con el #hash de la URL */
-.detail-product-view:target {
-    display: flex;
-}
-
-/* 3. Respaldo: Si entran a detail.html sin un ID en la URL, se muestra el primero */
-.detail-product-view:first-of-type {
-    display: flex;
-}
-
-/* 4. Si hay un producto seleccionado en la URL que NO es el primero, 
-      ocultamos el primero para que no se dupliquen visualmente */
-.detail-product-view:target ~ .detail-product-view:first-of-type {
-    display: none;
-}
-
-
-/* ==========================================================================
    ESTRUCTURA Y LAYOUT (MOBILE-FIRST)
    ========================================================================== */
 
 /* Bloque Superior: Galería de Imágenes */
 .product-gallery {
     position: relative;
-    width: 100%;
-    height: 55vh; /* Ocupa más de la mitad de la pantalla móvil */
-    background-color: #f5f5f5;
+    height: 55vh;
 }
 
 .product-gallery img {
+    margin: 2%;
     width: 100%;
     height: 100%;
+    border-radius: 30px;
     object-fit: cover;
 }
 
@@ -92,9 +64,7 @@ body {
 /* Bloque Inferior: Panel de Información */
 .product-info {
     background-color: #ffffff;
-    border-top-left-radius: 24px;
-    border-top-right-radius: 24px;
-    margin-top: -20px; /* Sube el panel para montarse elegantemente sobre la foto */
+    margin-top: 10px;
     position: relative;
     padding: 24px;
     flex-grow: 1;

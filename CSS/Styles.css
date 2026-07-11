@@ -131,12 +131,6 @@
     transition: all 0.2s ease;
 }
 
-.nav-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .nav-item img {
     width: 24px;   
     height: 24px;
@@ -155,7 +149,7 @@
 @media (min-width: 768px) {
     
     .mobile-nav {
-        bottom: 10%;
+        bottom: 5%;
         left: 30%;
         right: 30%;
     }
