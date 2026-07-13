@@ -1,8 +1,3 @@
-/* ==========================================================================
-   IMPORTACIÓN Y CONFIGURACIÓN BASE
-   ========================================================================== */
-@import url('variables.css');
-
 * {
     margin: 0;
     padding: 0;
@@ -10,56 +5,45 @@
 }
 
 body {
-    font-family: var(--font-main, 'Encode Sans', sans-serif);
+    font-family: var(--font-main);
     background-color: #ffffff;
-    color: #111111;
+    color: var(--accent-color);
     line-height: 1.5;
+    border-radius: 30px;
 }
 
 /* ==========================================================================
-   LÓGICA INTERACTIVA CON :TARGET (SIMULACIÓN DINÁMICA SIN JS)
+   LÓGICA INTERACTIVA CON :TARGET
    ========================================================================== */
 
-/* 1. Por defecto ocultamos todas las vistas de detalle de producto */
 .detail-product-view {
     display: none;
     flex-direction: column;
     min-height: 100vh;
 }
-
-/* 2. Mostramos únicamente la vista cuyo ID coincida con el #hash de la URL */
 .detail-product-view:target {
     display: flex;
 }
-
-/* 3. Respaldo: Si entran a detail.html sin un ID en la URL, se muestra el primero */
 .detail-product-view:first-of-type {
     display: flex;
 }
-
-/* 4. Si hay un producto seleccionado en la URL que NO es el primero, 
-      ocultamos el primero para que no se dupliquen visualmente */
 .detail-product-view:target ~ .detail-product-view:first-of-type {
     display: none;
 }
-
-
-/* ==========================================================================
-   ESTRUCTURA Y LAYOUT (MOBILE-FIRST)
-   ========================================================================== */
-
-/* Bloque Superior: Galería de Imágenes */
 .product-gallery {
     position: relative;
     width: 100%;
-    height: 55vh; /* Ocupa más de la mitad de la pantalla móvil */
-    background-color: #f5f5f5;
+    height: 55vh;
+    padding: 5px;
+    background-color: var(--bg-light);
 }
-
 .product-gallery img {
+    padding: 1px;
     width: 100%;
     height: 100%;
+    border-radius: 30px;
     object-fit: cover;
+    border-radius: 30px;
 }
 
 /* Botones flotantes sobre la imagen */
@@ -94,23 +78,16 @@ body {
     transform: scale(0.9);
 }
 
-.btn-fav {
-    color: #757575;
-}
-
 /* Bloque Inferior: Panel de Información */
 .product-info {
     background-color: #ffffff;
-    border-top-left-radius: 24px;
-    border-top-right-radius: 24px;
-    margin-top: -20px; /* Sube el panel para montarse elegantemente sobre la foto */
     position: relative;
     padding: 24px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    box-shadow: 0 -5px 15px rgba(0,0,0,0.03);
+
 }
 
 .product-title {
@@ -126,10 +103,6 @@ body {
     font-size: 0.85rem;
 }
 
-.stars {
-    color: #ffb703;
-}
-
 .rating-count {
     color: #757575;
     margin-left: 4px;
@@ -143,7 +116,7 @@ body {
 }
 
 /* ==========================================================================
-   ACORDEÓN DESPLEGABLE NATIVO (DETAILS / SUMMARY)
+   ACORDEÓN DESPLEGABLE
    ========================================================================== */
 .product-description-block {
     border-top: 1px solid #eeeeee;
@@ -182,12 +155,11 @@ body {
    ========================================================================== */
 .customization-row {
     display: flex;
-    flex-direction: row; /* Alineación horizontal */
-    gap: 20px;           /* Espacio de separación entre Talla y Color */
+    flex-direction: row; 
+    gap: 20px;           
     width: 100%;
 }
 
-/* Hacemos que cada bloque ocupe exactamente la mitad del espacio disponible */
 .customization-row .custom-group {
     flex: 1; 
 }
@@ -217,12 +189,10 @@ body {
     gap: 12px;
 }
 
-/* Esconder los Inputs Reales */
 .options-container input[type="radio"] {
     display: none;
 }
 
-/* Estilizar las Etiquetas de Tallas */
 .options-container label {
     display: flex;
     align-items: center;
@@ -237,14 +207,12 @@ body {
     transition: all 0.2s ease;
 }
 
-/* Efecto de Selección de Talla */
 .options-container input[type="radio"]:checked + label {
     border-color: #111111;
     background-color: #111111;
     color: #ffffff;
 }
 
-/* Estilizar las Etiquetas de Color */
 .options-container.colors label {
     width: 36px;
     height: 36px;
@@ -289,7 +257,7 @@ body {
 }
 
 /* ==========================================================================
-   BARRA FIJA DE COMPRA (CHECKOUT ACTIONS)
+   BARRA FIJA DE COMPRA
    ========================================================================== */
 .checkout-actions {
     position: sticky;
@@ -297,9 +265,8 @@ body {
     left: 0;
     right: 0;
     background-color: #ffffff;
-    border-top: 1px solid #eeeeee;
     padding: 16px 24px;
-    margin: 20px -24px -24px -24px; /* Cancela el padding del contenedor padre */
+    margin: 20px -24px -24px -24px;
     display: flex;
     justify-content:center;
     align-items: center;
@@ -325,8 +292,7 @@ body {
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 .btn-buy-now img {
-    fill:#121111;
-    stroke: #ffffff;
+    filter: invert(1);
     width: 20px;
     height: 20px;
 }
@@ -381,6 +347,6 @@ body {
         position: relative;
         margin-top: auto;
         padding: 20px 0 0 0;
-        border-top: 1px solid #eeeeee;
+        background-color: var(--bg-light);
     }
 }

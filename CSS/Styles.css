@@ -1,45 +1,249 @@
-/* ==========================================================================
-   ESTILOS DE LA SECCIÓN DE BIENVENIDA
-   ========================================================================== */
+.main-header {
+    background-color: #ffffff;
+    padding: 16px 20px 8px 20px;
+    font-family: var(--font-main);
+    position: sticky;
+    top: 2%;
+    z-index: 100;
+}
+
+/* Distribución del bloque superior */
+.header-top {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+/* Bloque de Perfil de Usuario */
+.User-Profile {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.profile-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--border-color);
+}
+
+.ProfileSaludo {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.ProfileUser {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+/* Barra de búsqueda y botón de filtro alineados */
+.Search-bar {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.input-container {
+    position: relative;
+    flex-grow: 1;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-light);
+    border-radius: 12px;
+    font-size: 0.9rem;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+#searchInput:focus {
+    border-color: var(--primary-color);
+    border-color: var(--primary-color);
+    background-color: #ffffff;
+}
 
 
+.BotonFiltro {
+    background-color: var(--primary-color);
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+/* Invertir el color del icono de filtro si es negro para que resalte en el botón oscuro */
+.BotonFiltro img {
+    filter: invert(1); 
+}
+
+.BotonFiltro:active {
+    transform: scale(0.95);
+}
+
 /* ==========================================================================
-   ESTILOS DE LA SECCIÓN DE BIENVENIDA
+   BARRA DE NAVEGACIÓN INFERIOR DE LA APP
    ========================================================================== */
+
+.mobile-nav {
+    position: fixed;
+    bottom: 5%;
+    left: 5%;
+    right: 5%;
+    height: 60px; 
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000;
+    background-color: #121111
+
+}
+
+/* Cada uno de tus enlaces contenedores */
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25%; /* Divide la barra exactamente en 4 partes iguales */
+    height: 100%;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.nav-item img {
+    width: 24px;   
+    height: 24px;
+    object-fit: contain;
+    opacity: 1;  
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: invert(1); 
+}
+
+/* ==========================================================================
+   RESPONSIVE - COMPORTAMIENTO EN ESCRITORIO
+   ========================================================================== */
+@media (min-width: 768px) {
+    .mobile-nav {
+        bottom: 1%;
+        left: 30%;
+        right: 30%;
+    }
+}
+
+/* ==========================================================================
+   MENÚ DE CATEGORÍAS
+   ========================================================================== */
+
+.nav-categories {
+    margin-left: -20px;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
 .categories-list {
     display: flex;
-    gap: 15px;
+    gap: 10px;
     list-style: none;
-    padding: 10px;
-    overflow-x: auto;
+    padding: 4px 20px 8px 20px;
+    overflow-x: auto; 
     white-space: nowrap;
+    scrollbar-width: none; /* Oculta la barra de scroll en Firefox */
 }
-.menu {
-    border: solid;
-    border-width: 1px;
-    border-radius: 5px;
-    border-color: #A3A1A2;
+
+/* Ocultar barra de scroll en navegadores basados en Webkit (Chrome, Safari, Edge) */
+.categories-list::-webkit-scrollbar {
+    display: none;
 }
-.nav-menu{
-    padding: 2px;
-    font-family: var(--font-main);
+
+/* Botón individual de categoría */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     text-decoration: none;
-    color: var(--primary-color)
+    color: var(--text-muted);
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 25px;
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-color);
+    transition: all 0.2s ease;
 }
+
 .nav-menu img {
-    margin: 2px;
     width: 20px;
+    height: 20px;
+    object-fit: cover;
+    border: 1px solid #ffffff;
+    transition: all 0.2s ease;
+}
+
+.nav-menu:active {
+    color: #ffffff;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+@media (min-width: 768px) {
+    .header-top {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .Search-bar {
+        max-width: 450px; 
+    }
+
+    .nav-categories {
+       margin: 0;
+    }
+
+    .categories-list {
+        padding: 12px 0 4px 0;
+        justify-content: flex-start;
+        overflow-x: visible;
+        flex-wrap: wrap; 
+    }
 }
 
 /* ==========================================================================
-   ESTILOS DE LA SECCIÓN Y LA REJILLA (GRID)
+   ESTILOS DE LA SECCIÓN Y LA REJILLA 
    ========================================================================== */
 .Product-Categories-Section {
     padding: 20px;
     font-family: var(--font-main);
 }
 
-/* Mobile-first: Por defecto en pantallas pequeñas muestra 2 columnas */
 .Product-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -47,7 +251,7 @@
 }
 
 /* ==========================================================================
-   TARJETA DE PRODUCTO (CARD)
+   TARJETA DE PRODUCTO 
    ========================================================================== */
 .Product-card {
     background-color: #ffffff;
@@ -62,7 +266,7 @@
 .Card-Image-Container {
     position: relative;
     width: 100%;
-    height: 70%;
+    height: 100%;
     padding-top: 125px;
     background-color: var(--bg-light);
     border-radius: 12px;
@@ -149,12 +353,12 @@
     color: var(--text-muted);
 }
 
-/* Footer de la tarjeta: Precio y botón */
+/* Footer de la tarjeta: Precio y calificación */
 .card-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: auto; /* Alineación perfecta al fondo */
+    margin-top: auto;
 }
 
 .Product-Price {
@@ -167,7 +371,6 @@
    MEDIA QUERIES (RESPONSIVE)
    ========================================================================== */
 
-/* Pantallas medianas (Tabletas - desde 600px) */
 @media (min-width: 600px) {
     .Product-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -178,7 +381,6 @@
     }
 }
 
-/* Pantallas grandes (Escritorio - desde 1024px) */
 @media (min-width: 1024px) {
     .Product-grid {
         grid-template-columns: repeat(4, 1fr); /* 4 tarjetas por fila */
@@ -187,8 +389,5 @@
     }
     .Product-Categories-Section {
         padding: 40px 20px;
-    }
-    .Details:hover {
-        background-color: #333333; /* Efecto hover visual sin romper restricciones */
     }
 }
