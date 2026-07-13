@@ -6,14 +6,17 @@
     <link rel="font" href="Storage/Font/EncodeSans-VariableFont_wdth,wght.ttf">
     <link rel="stylesheet" href="CSS/Styles.css">
     <link rel="stylesheet" href="CSS/Variables.css">
+    <link rel="stylesheet" href="CSS/Details.css">
     <title>App e-Commerce Ropa</title>
 </head>
 <body>
     <header class="main-header">
         <div class="header-top">
             <div class="User-Profile">
-                <div class="ProfileSaludo">Hello, Welcome 👋</div>
-                <div class="ProfileUser"><h1>Nancy Aldana</h1></div>
+                <div>
+                    <div class="ProfileSaludo">Hello, Welcome 👋</div>
+                    <div class="ProfileUser"><h1>Nancy Aldana</h1></div>
+                </div>
                 <img src="Storage/Img/Perfil.jpg" alt="Foto de perfil" class="profile-img">
             </div>
             <div class="Search-bar">
@@ -25,17 +28,17 @@
         </div>
         <nav class="nav-categories">
             <ul class="categories-list">
-                <li><a href="#Todas" class="nav-menu"><img src="Storage/Img/AppIcon/Items.jpg" alt="All Items">All Items</a></li>
-                <li><a href="#Dress" class="nav-menu"><img src="Storage/Img/AppIcon/Dress.jpg" alt="Dress">Vestidos</a></li>
-                <li><a href="#TShirt" class="nav-menu"><img src="Storage/Img/AppIcon/Top.jpg" alt="Top">Camisetas y Tops</a></li>
-                <li><a href="#Jeans" class="nav-menu"><img src="Storage/Img/AppIcon/Jeans.jpg" alt="Jeans">Vaqueros y Jeans</a></li>
-                <li><a href="#Sweaters" class="nav-menu"><img src="Storage/Img/AppIcon/Sweater.jpg" alt="Sweaters">Sudaderas y Suéteres</a></li>
-                <li><a href="#Coats" class="nav-menu"><img src="Storage/Img/AppIcon/Abrigo.png" alt="Coats">Chaqueta y Abrigos</a></li>
-                <li><a href="#Pants" class="nav-menu"><img src="Storage/Img/AppIcon/Shorts.png" alt="Pants">Pantalones y Shorts</a></li>
-                <li><a href="#Shirts" class="nav-menu"><img src="Storage/Img/AppIcon/Blusa.png" alt="Blouses">Camisas y Blusas</a></li>
-                <li><a href="#Footwear" class="nav-menu"><img src="Storage/Img/AppIcon/Shoes.jpg" alt="Footwear">Calzado</a></li>
-                <li><a href="#Sleepwear" class="nav-menu"><img src="Storage/Img/AppIcon/Pijama.jpg" alt="Sleepwear">Ropa de Dormir y Lounge</a></li>
-                <li><a href="#Accessories" class="nav-menu"><img src="Storage/Img/AppIcon/Accessories.png" alt="Accessories">Accesorios de Moda</a></li>
+                <li><a href="#Todas" class="nav-menu"><img src="Storage/Img/AppIcon/items.svg" alt="All Items">All Items</a></li>
+                <li><a href="#Dress" class="nav-menu"><img src="Storage/Img/AppIcon/dress.svg" alt="Dress">Vestidos</a></li>
+                <li><a href="#TShirt" class="nav-menu"><img src="Storage/Img/AppIcon/t-shirt.svg" alt="Top">Camisetas y Tops</a></li>
+                <li><a href="#Jeans" class="nav-menu"><img src="Storage/Img/AppIcon/jeans.svg" alt="Jeans">Vaqueros y Jeans</a></li>
+                <li><a href="#Sweaters" class="nav-menu"><img src="Storage/Img/AppIcon/sweatshirt.svg" alt="Sweaters">Sudaderas y Suéteres</a></li>
+                <li><a href="#Coats" class="nav-menu"><img src="Storage/Img/AppIcon/coats.svg" alt="Coats">Chaqueta y Abrigos</a></li>
+                <li><a href="#Pants" class="nav-menu"><img src="Storage/Img/AppIcon/shorts.svg" alt="Pants">Pantalones y Shorts</a></li>
+                <li><a href="#Shirts" class="nav-menu"><img src="Storage/Img/AppIcon/blouse.svg" alt="Blouses">Camisas y Blusas</a></li>
+                <li><a href="#Footwear" class="nav-menu"><img src="Storage/Img/AppIcon/footwear.svg" alt="Footwear">Calzado</a></li>
+                <li><a href="#Sleepwear" class="nav-menu"><img src="Storage/Img/AppIcon/pijama.svg" alt="Sleepwear">Ropa de Dormir y Lounge</a></li>
+                <li><a href="#Accessories" class="nav-menu"><img src="Storage/Img/AppIcon/accessory.svg" alt="Accessories">Accesorios de Moda</a></li>
             </ul>
         </nav>
     </header>
@@ -795,19 +798,21 @@
             </div>
         </section>
     </main>
-    <nav class="mobile-nav">
-        <a href="#inicio" class="nav-item">
-            <span><img src="Storage/Img/AppIcon/home.svg" alt="Home"></span>
-        </a>
-        <a href="#carrito" class="nav-item">
-        <span><img src="Storage/Img/AppIcon/ShopCart.svg" alt="Carrito"></span>
-        </a>
-        <a href="#favoritos" class="nav-item">
-            <span><img src="Storage/Img/AppIcon/heart.svg" alt="Favoritos"></span>
-        </a>
-        <a href="#perfil" class="nav-item">
-            <span><img src="Storage/Img/AppIcon/user.svg" alt="Perfil"></span>
-        </a>
-    </nav>
+    <div class="checkout-actions">
+        <nav class="mobile-nav">
+            <a href="#inicio" class="nav-item">
+                <span><img src="Storage/Img/AppIcon/home.svg" alt="Home"></span>
+            </a>
+            <a href="#carrito" class="nav-item">
+            <span><img src="Storage/Img/AppIcon/ShopCart.svg" alt="Carrito"></span>
+            </a>
+            <a href="#favoritos" class="nav-item">
+                <span><img src="Storage/Img/AppIcon/heart.svg" alt="Favoritos"></span>
+            </a>
+            <a href="#perfil" class="nav-item">
+                <span><img src="Storage/Img/AppIcon/user.svg" alt="Perfil"></span>
+            </a>
+        </nav>
+    </div>
 </body>
 </html>
