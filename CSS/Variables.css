@@ -1,11 +1,8 @@
-/* ==========================================================================
-   VARIABLES (variables.css o al inicio de tu archivo)
-   ========================================================================== */
 :root {
     --primary-color: #292526;    /* Tonos oscuros para una UI limpia de moda */
-    --accent-color: #121111;     /* Color para favoritos (corazón) o etiquetas */
+    --accent-color: #121111;     
     --text-muted: #A3A1A2;       /* Gris para categorías y calificaciones */
-    --bg-light: #f2f2f2;         /* Fondo de las tarjetas o secciones */
+    --bg-light: #ffffff;         /* Fondo de las tarjetas o secciones */
     --border-color: #eeeeee;
     --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     --font-main: 'Encode Sans', sans-serif; /* Tipografía requerida en tu árbol */

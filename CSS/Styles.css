@@ -1,14 +1,10 @@
-/* ==========================================================================
-   ESTILOS DEL HEADER - MOBILE FIRST
-   ========================================================================== */
-
 .main-header {
     background-color: #ffffff;
     padding: 16px 20px 8px 20px;
-    border-bottom: 1px solid var(--border-color, #eeeeee);
-    font-family: var(--font-main, 'Encode Sans', sans-serif);
+    border-bottom: 1px solid var(--border-color);
+    font-family: var(--font-main);
     position: sticky;
-    top: 0;
+    top: 2%;
     z-index: 100;
 }
 
@@ -23,8 +19,9 @@
 /* Bloque de Perfil de Usuario */
 .User-Profile {
     display: flex;
-    flex-direction:initial;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
     gap: 12px;
 }
 
@@ -33,19 +30,19 @@
     height: 48px;
     border-radius: 50%;
     object-fit: cover;
-    border: 1px solid var(--border-color, #eeeeee);
+    border: 1px solid var(--border-color);
 }
 
 .ProfileSaludo {
     font-size: 0.8rem;
-    color: var(--text-muted, #757575);
+    color: var(--text-muted);
     margin: 0;
 }
 
 .ProfileUser {
     font-size: 1.1rem;
     font-weight: 600;
-    color: var(--primary-color, #111111);
+    color: var(--primary-color);
     margin: 0;
 }
 
@@ -64,8 +61,8 @@
 #searchInput {
     width: 100%;
     padding: 12px 16px;
-    border: 1px solid var(--border-color, #eeeeee);
-    background-color: var(--bg-light, #f9f9f9);
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-light);
     border-radius: 12px;
     font-size: 0.9rem;
     outline: none;
@@ -73,13 +70,13 @@
 }
 
 #searchInput:focus {
-    border-color: var(--primary-color, #111111);
+    border-color: var(--primary-color);
     background-color: #ffffff;
 }
 
 
 .BotonFiltro {
-    background-color: var(--primary-color, #111111);
+    background-color: var(--primary-color);
     border: none;
     width: 45px;
     height: 45px;
@@ -110,13 +107,13 @@
     left: 5%;
     right: 5%;
     height: 60px; 
-    background-color: #121111;
-    border-top: 1px solid var(--border-color, #121111);
     border-radius: 50px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     z-index: 1000;
+    background-color: #121111
+
 }
 
 /* Cada uno de tus enlaces contenedores */
@@ -155,10 +152,10 @@
    RESPONSIVE - COMPORTAMIENTO EN ESCRITORIO
    ========================================================================== */
 @media (min-width: 768px) {
-    /* Como en pantallas grandes (Desktop) se suele navegar desde el header superior,
-       ocultamos la barra baja para evitar sobrecargar visualmente la pantalla */
     .mobile-nav {
-        display: none;
+        bottom: 1%;
+        left: 30%;
+        right: 30%;
     }
 }
 
@@ -167,7 +164,7 @@
    ========================================================================== */
 
 .nav-categories {
-    margin-left: -20px; /* Rompe el padding del header para un scroll infinito de borde a borde */
+    margin-left: -20px;
     margin-right: -20px;
 }
 
@@ -192,30 +189,28 @@
     align-items: center;
     gap: 8px;
     text-decoration: none;
-    color: var(--text-muted, #757575);
+    color: var(--text-muted);
     font-size: 0.85rem;
     font-weight: 500;
     padding: 8px 14px;
     border-radius: 25px;
-    background-color: var(--bg-light, #f9f9f9);
-    border: 1px solid var(--border-color, #eeeeee);
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-color);
     transition: all 0.2s ease;
 }
 
 .nav-menu img {
     width: 20px;
     height: 20px;
-    border-radius: 25%;
     object-fit: cover;
-    stroke: #ffffff;
     border: 1px solid #ffffff;
     transition: all 0.2s ease;
 }
 
 .nav-menu:active {
     color: #ffffff;
-    background-color: var(--primary-color, #A3A1A2);
-    border-color: var(--primary-color, #A3A1A2);
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
 }
 
 /* ==========================================================================
@@ -233,7 +228,7 @@
     }
 
     .nav-categories {
-        margin: 0;
+       margin: 0;
     }
 
     .categories-list {
