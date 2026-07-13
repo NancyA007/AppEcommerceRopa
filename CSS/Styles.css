@@ -1,7 +1,6 @@
 .main-header {
     background-color: #ffffff;
     padding: 16px 20px 8px 20px;
-    border-bottom: 1px solid var(--border-color);
     font-family: var(--font-main);
     position: sticky;
     top: 2%;
@@ -31,12 +30,10 @@
     border-radius: 50%;
     object-fit: cover;
     border: 1px solid var(--border-color);
-    border: 1px solid var(--border-color);
 }
 
 .ProfileSaludo {
     font-size: 0.8rem;
-    color: var(--text-muted);
     color: var(--text-muted);
     margin: 0;
 }
@@ -44,7 +41,6 @@
 .ProfileUser {
     font-size: 1.1rem;
     font-weight: 600;
-    color: var(--primary-color);
     color: var(--primary-color);
     margin: 0;
 }
@@ -82,7 +78,6 @@
 
 
 .BotonFiltro {
-    background-color: var(--primary-color);
     background-color: var(--primary-color);
     border: none;
     width: 45px;

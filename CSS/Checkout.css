@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-main);
+}
+
+body {
+    padding: 24px;
+    font-family: var(--font-main);
+    background-color: var(--bg-light);
+    color: var(--accent-color);
+    line-height: 1.5;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-check {
+    background-color: #ffffff;
+    font-family: var(--font-main);
+    padding-top: 10%;
+    left: 10%;
+    right: 10%;
+    padding-bottom: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 12px;
+    z-index: 10;
+}
+
+.bn-back, .bn-menu {
+    border: 1px solid;
+    border-color: var(--text-muted);
+    background-color: var(--bg-light);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #111111;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.bn-menu img {
+    width: 25px;
+    height: 25px;
+}
+
+.bn-back:hover, .bn-menu:hover {
+    background-color: var(--bg-light);
+    filter: invert(1);
+    
+}
+
+.bn-back:active, .bn-menu:active {
+    background-color: #121111;
+    transform: scale(0.9);
+}
+
+/* Contenedor principal de la tarjeta (Fila horizontal) */
+.product-card-check {
+    flex: 1;
+    width: 95%;
+    margin-top: 3%;
+    margin-left: 2px;
+    margin-right: 2px;
+    border-bottom: 1px solid #eeeeee;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 16px;
+    gap: 20px;
+    font-family: var(--font-main)
+}
+
+.check-image-container .product-image {
+    width: 95px;
+    height: 95px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+/* El bloque de la derecha ocupa todo el espacio restante */
+.card-check-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Espacio entre textos superiores y fila inferior */
+}
+
+/* Textos del producto */
+.product-title a {
+    color: #1a1a1a;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.product-category-tag {
+    color: #8c8c8c;
+    font-size: 13px;
+    display: block;
+    margin-top: 4px;
+}
+
+/* Fila inferior: Precio a la izquierda, Selector a la derecha */
+.card-footer-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-price {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+/* Selector de cantidad */
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: none;
+}
+
+/* Botones circulares con borde sutil */
+.btn-qty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #e0e0e0;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+    transition: background-color 0.2s;
+}
+
+.btn-qty:hover {
+    background-color: #f5f5f5;
+}
+
+.btn-qty img {
+    width: 14px;
+    height: 14px;
+}
+
+/* Número de la cantidad */
+.qty-number {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1a1a1a;
+    min-width: 12px;
+    text-align: center;
+}
+
+/* Contenedor principal de la sección */
+.Pay-method {
+    font-family: var(--font-main);
+    margin: 20px 0;
+}
+
+.Pay-method h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-top: 0;
+    margin-bottom: 12px;
+    letter-spacing: -0.2px;
+}
+
+/* El bloque contenedor de la tarjeta */
+.credit-card {
+    display: flex;
+    align-items: center;        
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    padding: 14px 18px;
+    gap: 16px;
+}
+
+.Card-type {
+    height: 32px;
+    width: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+.credit-card span {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2b2b2b;
+    letter-spacing: 0.5px;
+    flex-grow: 1;
+}
+
+.Down {
+    height: 20px;
+    width: auto;
+    opacity: 0.8;
+    display: block;
+    cursor: pointer;
+}
+
+.Pay-Information, .SubTotal {
+    padding: 20px 20px 10px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.SubTotal {
+    border-top: 1px solid #e0e0e0;
+    padding-top: 16px;
+}
+
+.Information {
+    font-size: 14px;
+    color: var(--accent-color);
+}
+
+.Total {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.checkout-actions {
+    height: 80px;
+}
+
+.Pay {
+    position: fixed;
+    bottom: 5%;
+    left: 5%;
+    right: 5%;
+    height: 60px; 
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000;
+    background-color: #121111;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.Pay:hover {
+    background-color: #A3A1A2;
+}
+
+.Pay:active {
+    background-color: #f2f2f2;
+    transform: scale(0.95);
+}

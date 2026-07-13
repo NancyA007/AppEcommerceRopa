@@ -6,7 +6,6 @@
 
 body {
     font-family: var(--font-main);
-    font-family: var(--font-main);
     background-color: #ffffff;
     color: var(--accent-color);
     line-height: 1.5;
@@ -82,7 +81,6 @@ body {
 /* Bloque Inferior: Panel de Información */
 .product-info {
     background-color: #ffffff;
-    /*margin-top: -10px; /* Sube el panel para montarse elegantemente sobre la foto */
     position: relative;
     padding: 24px;
     flex-grow: 1;
